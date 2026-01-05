@@ -1,0 +1,16 @@
+.search-box {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+}
+
+input {
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+input:focus {
+  border: 1px solid var(--color-text);
+  outline: none;
+}

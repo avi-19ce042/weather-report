@@ -1,0 +1,33 @@
+<div class="top-container">
+  <button
+    class="city-btn"
+    (click)="openAddCityDialog()"
+    mat-raised-button
+  >
+    <mat-icon>add</mat-icon> Add City
+  </button>
+</div>
+
+<div class="card-panel">
+  <!-- Previous -->
+  <button class="nav-btn left" (click)="prev()" [disabled]="isAtStart">
+    ‹
+  </button>
+
+  <!-- Viewport -->
+  <div class="card-viewport">
+    <div
+      class="card-track"
+      [style.transform]="transform"
+    >
+      @for (weather of weatherList; track weather.id) {
+        <city-card [weather]="weather"></city-card>
+      }
+    </div>
+  </div>
+
+  <!-- Next -->
+  <button class="nav-btn right" (click)="next()" [disabled]="isAtEnd">
+    ›
+  </button>
+</div>

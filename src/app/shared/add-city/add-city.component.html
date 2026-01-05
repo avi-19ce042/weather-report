@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>Add City</h2>
+
+<mat-dialog-content>
+  <mat-form-field appearance="outline">
+    <input matInput [formControl]="cityControl" (keyup.enter)="addCity()" />
+    @if (cityControl.dirty && cityControl.hasError('required')) {
+    <mat-error> City name is required </mat-error>
+    } @if (cityControl.dirty && cityControl.hasError('minlength')) {
+    <mat-error> Enter at least 3 characters </mat-error>
+    }
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="close()">Cancel</button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="addCity()"
+    [disabled]="cityControl.invalid"
+  >
+    Add
+  </button>
+</mat-dialog-actions>

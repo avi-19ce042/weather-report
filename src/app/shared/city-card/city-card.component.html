@@ -1,0 +1,30 @@
+<div class="city-card">
+  <!-- City Name -->
+  <h2 class="city-name">{{ weather.name }}</h2>
+
+  <!-- Weather Icon -->
+  <div class="weather-icon">
+    <img [src]="iconUrl" alt="" />
+  </div>
+
+  <!-- Temperature -->
+  <div class="temperature">{{ roundOff(weather.main.temp) }}</div>
+
+  <!-- Weather Condition -->
+  <div class="weather-condition">{{ weather.weather[0].main }}</div>
+
+  <!-- Min / Max Section -->
+  <div class="min-max">
+    <div class="min">
+      <span class="value">{{ roundOff(weather.main.temp_min) }}</span>
+      <span class="label">Min</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="max">
+      <span class="value">{{ roundOff(weather.main.temp_max) }}</span>
+      <span class="label">Max</span>
+    </div>
+  </div>
+</div>

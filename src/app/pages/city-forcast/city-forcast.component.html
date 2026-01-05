@@ -1,0 +1,59 @@
+<div class="forecast-card">
+  <!-- ===== TOP SECTION ===== -->
+  <div class="top-section">
+    <!-- City Info -->
+    <div class="city-info">
+      <h2 class="city-name">{{ weather.name }}</h2>
+      <p class="city-date">{{ weather.dt }}</p>
+    </div>
+
+    <!-- Weather Icon -->
+    <div class="weather-icon">
+      <img
+        [src]="iconUrl"
+        alt="Weather icon"
+      />
+    </div>
+
+    <!-- Weather Description -->
+    <div class="weather-desc">
+      <div class="temp">20°C</div>
+      <div class="desc">Clouds</div>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- ===== BOTTOM SECTION ===== -->
+  <div class="details-grid">
+    <div class="detail">
+      <span class="label">Min Temp</span>
+      <span class="value">16°C</span>
+    </div>
+
+    <div class="detail">
+      <span class="label">Humidity</span>
+      <span class="value">62%</span>
+    </div>
+
+    <div class="detail">
+      <span class="label">Sunrise</span>
+      <span class="value">6:32 AM</span>
+    </div>
+
+    <div class="detail">
+      <span class="label">Max Temp</span>
+      <span class="value">24°C</span>
+    </div>
+
+    <div class="detail">
+      <span class="label">Feels Like</span>
+      <span class="value">22°C</span>
+    </div>
+
+    <div class="detail">
+      <span class="label">Sunset</span>
+      <span class="value">5:49 PM</span>
+    </div>
+  </div>
+</div>

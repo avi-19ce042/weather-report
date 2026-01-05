@@ -1,0 +1,28 @@
+<!-- Toolbar -->
+
+<div class="app-shell">
+  <div class="app-header">
+    <div class="header-left">
+      <button class="icon-btn" (click)="toggleMenu()"><fa-icon [icon]="faBars" /></button>
+      <div class="username"> {{ userName }}</div>
+    </div>
+    <div class="header-right">
+      <search-box />
+      <button class="icon-btn" (click)="toggleTheme()">
+        <fa-icon [icon]="!isDarkMode ? faSun : faMoon"></fa-icon>
+      </button>
+    </div>
+  </div>
+  <div class="app-body">
+    <nav class="app-sidebar" [class.closed]="!isSideBarOpen">
+        <ul>
+            <li routerLink="/dashboard" routerLinkActive="active">Dashboard</li>
+            <!-- Todo: make it dynamic -->
+            <li routerLink="/city-forcast/mumbai" routerLinkActive="active">user</li>
+        </ul>
+    </nav>
+    <div class="app-content">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

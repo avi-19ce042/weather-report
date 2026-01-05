@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body { height: 100%; }
+
+body { 
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px; 
+}
+
+mat-form-field.mat-form-field {
+  font-size: 14px; /* Ensure specific override if needed */
+}
+
+:root {
+  --color-primary: #2196f3;     /* Sky blue */
+  --color-secondary: #ffeb3b;   /* Sun yellow */
+  --color-accent: #ff9800;      /* Warm orange */
+
+  --color-bg: #f5f9ff;
+  --color-surface: #ffffff;
+
+  --color-text: #1e293b;
+  --color-text-secondary: #64748b;
+
+  --color-border: #e2e8f0;
+}
+
+[dark-mode="dark"] {
+  --color-primary: #90caf9;
+  --color-secondary: #fff59d;
+  --color-accent: #ffb74d;
+
+  --color-bg: #0f172a;
+  --color-surface: #1e293b;
+
+  --color-text: #e5e7eb;
+  --color-text-secondary: #94a3b8;
+
+  --color-border: #334155;
+}
+
+// :root {
+//   // Decrement the number for increased density (smaller size)
+//   // @include mat.form-field-density(-5);
+//   --color-primary: #357DE8;
+//   --color-bg: #CFE1FD;
+//   --color-surface: #ffffff;
+//   --color-text: #0f172a;
+// }
